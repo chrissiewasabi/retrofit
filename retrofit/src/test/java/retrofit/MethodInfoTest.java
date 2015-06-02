@@ -1,8 +1,7 @@
 // Copyright 2013 Square, Inc.
 package retrofit;
 
-import com.google.gson.reflect.TypeToken;
-import com.squareup.okhttp.Response;
+import com.google.common.reflect.TypeToken;
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
 import java.util.Collections;

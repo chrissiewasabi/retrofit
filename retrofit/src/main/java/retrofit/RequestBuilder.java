@@ -28,7 +28,6 @@ import java.lang.reflect.Array;
 import java.net.URLEncoder;
 import java.util.Map;
 import okio.BufferedSink;
-import retrofit.converter.Converter;
 import retrofit.http.Body;
 import retrofit.http.Field;
 import retrofit.http.FieldMap;

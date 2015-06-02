@@ -21,8 +21,6 @@ import android.os.Looper;
 import com.squareup.okhttp.OkHttpClient;
 import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
-import retrofit.converter.Converter;
-import retrofit.converter.GsonConverter;
 
 class Platform {
   private static final Platform PLATFORM = findPlatform();
@@ -44,7 +42,7 @@ class Platform {
   }
 
   Converter defaultConverter() {
-    return new GsonConverter();
+    return new DefaultConverter();
   }
 
   Executor defaultCallbackExecutor() {

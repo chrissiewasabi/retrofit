@@ -24,7 +24,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executor;
-import retrofit.converter.Converter;
 import retrofit.http.HTTP;
 import retrofit.http.Header;
 
@@ -50,8 +49,8 @@ import static retrofit.Utils.checkNotNull;
  * <p>
  * The body of a request is denoted by the {@link retrofit.http.Body @Body} annotation. The object
  * will be converted to request representation by a call to
- * {@link retrofit.converter.Converter#toBody(Object, java.lang.reflect.Type) toBody}
- * on the supplied {@link retrofit.converter.Converter Converter} for this instance.
+ * {@link Converter#toBody(Object, java.lang.reflect.Type) toBody}
+ * on the supplied {@link Converter Converter} for this instance.
  * <p>
  * Alternative request body formats are supported by method annotations and corresponding parameter
  * annotations:
@@ -71,11 +70,11 @@ import static retrofit.Utils.checkNotNull;
  * <li>On the provided HTTP {@link Executor} with callbacks marshaled to the callback
  * {@link Executor}. The last method parameter should be of type {@link Callback}. The HTTP
  * response will be converted to the callback's parameter type using the specified
- * {@link retrofit.converter.Converter Converter}. If the callback parameter type uses a wildcard,
+ * {@link Converter Converter}. If the callback parameter type uses a wildcard,
  * the lower bound will be used as the conversion type.
  * <li>On the current thread returning the response or throwing a {@link RetrofitError}. The HTTP
  * response will be converted to the method's return type using the specified
- * {@link retrofit.converter.Converter Converter}.
+ * {@link Converter Converter}.
  * </ul>
  * <p>
  * For example:
